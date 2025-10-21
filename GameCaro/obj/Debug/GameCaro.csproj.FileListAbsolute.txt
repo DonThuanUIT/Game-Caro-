@@ -1,0 +1,11 @@
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\bin\Debug\GameCaro.exe.config
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\bin\Debug\GameCaro.exe
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\bin\Debug\GameCaro.pdb
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.csproj.AssemblyReference.cache
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.Properties.Resources.resources
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.csproj.GenerateResource.cache
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.csproj.CoreCompileInputs.cache
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.exe
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.pdb
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.exe.config
+D:\LearnCsharp\Game_Caro_Personal_Project\Game-Caro-\GameCaro\obj\Debug\GameCaro.Form1.resources
