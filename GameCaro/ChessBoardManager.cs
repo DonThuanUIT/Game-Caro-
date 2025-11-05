@@ -38,7 +38,33 @@ namespace GameCaro
             set { playerMark = value; }
         }
         #endregion
-        private List<List<Button>> matrix; 
+        private List<List<Button>> matrix;
+
+        private event EventHandler playerMarked;
+        public event EventHandler PlayerMarked
+        {
+            add 
+            {
+                playerMarked += value; 
+            }
+            remove
+            {
+                playerMarked -= value; 
+            }
+        }
+
+        private event EventHandler endedGame;
+        public event EventHandler EndedGame
+        {
+            add
+            {
+                endedGame += value;
+            }
+            remove
+            {
+                endedGame -= value;
+            }
+        }
         #region Initialize
         public ChessBoardManager(Panel chessBoard, TextBox playerName, PictureBox mark)
         {
@@ -60,6 +86,7 @@ namespace GameCaro
         #region Methods
         public void DrawChessBoard()
         {
+            ChessBoard.Enabled = true; 
             matrix = new List<List<Button>>(); 
 
             for (int i = 0; i < Constant.CHESS_BOARD_WIDTH; i++) // Số ô ngang
@@ -119,7 +146,7 @@ namespace GameCaro
                 else break;
             }
 
-            return cntLeft + cntRight == 5; 
+            return cntLeft + cntRight >= 5; 
         }
         private bool isEndVertical(Button btn)
         {
@@ -143,7 +170,7 @@ namespace GameCaro
                 else break;
             }
 
-            return cntTop + cntBottom == 5;
+            return cntTop + cntBottom >= 5;
         }
         private bool isEndMainDiagonal(Button btn)
         {
@@ -167,7 +194,7 @@ namespace GameCaro
                 else break;
             }
 
-            return cntTop + cntBottom == 5;
+            return cntTop + cntBottom >= 5;
         }
         private bool isEndAntiDiagonal(Button btn)
         {
@@ -175,7 +202,8 @@ namespace GameCaro
             int cntTop = 0;
             for (int i = 0; i <= Math.Min(point.X, point.Y); i++)
             {
-                if (matrix[point.X - i][point.Y - i].BackgroundImage == btn.BackgroundImage)
+                if (point.X + i >= Constant.CHESS_BOARD_WIDTH || point.Y - i < 0) break;     
+                if (matrix[point.X + i][point.Y - i].BackgroundImage == btn.BackgroundImage)
                 {
                     cntTop++;
                 }
@@ -184,14 +212,15 @@ namespace GameCaro
             int cntBottom = 0;
             for (int i = 1; i < Constant.CHESS_BOARD_WIDTH - Math.Max(point.X, point.Y); i++)
             {
-                if (matrix[point.X + i][point.Y + i].BackgroundImage == btn.BackgroundImage)
+                if (point.X - i < 0 || point.Y + i > Constant.CHESS_BOARD_HEIGHT) break; 
+                if (matrix[point.X - i][point.Y + i].BackgroundImage == btn.BackgroundImage)
                 {
                     cntBottom++;
                 }
                 else break;
             }
 
-            return cntTop + cntBottom == 5;
+            return cntTop + cntBottom >= 5;
         }
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -202,14 +231,22 @@ namespace GameCaro
             ChangeMark(btn);
             ChangePlayer();
 
+            if(playerMarked != null)
+            {
+                playerMarked(this, new EventArgs());
+            }
+
             if (isEndGame(btn))
             {
                 EndGame(); 
             }
         }
-        private void EndGame()
+        public void EndGame()
         {
-            MessageBox.Show("Kết thúc game!");
+            if(endedGame != null)
+            {
+                endedGame(this, new EventArgs()); 
+            }
         }
         private void ChangeMark(Button btn)
         {
