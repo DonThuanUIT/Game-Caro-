@@ -31,6 +31,9 @@ namespace GameCaro
         #region Methods
         void NewGame()
         {
+            picFireWorks.Visible = false;
+            picFireWorks.Image = null; // ngưng load ảnh để tiết kiệm bộ nhớ !. 
+
             prcbCoolDown.Value = 0; // set thanh thời gian về 0. 
             tmCoolDown.Stop(); // cho nó không chạy để chờ người chơi đánh rồi mới chạy. 
             undoToolStripMenuItem.Enabled = true;
@@ -54,8 +57,18 @@ namespace GameCaro
             undoToolStripMenuItem.Enabled = false; // khóa nút Undo lại. 
 
             MessageBox.Show("Chúc mừng " + ChessBoard.GetCurrentPlayerInfo().Name + " đã chiến thắng!");
-        }
 
+            try
+            {
+                // Lấy ảnh GIF từ Resources: 
+                picFireWorks.Image = Properties.Resources.fireworks;
+                picFireWorks.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải hiệu ứng pháo hoa: " + ex.Message);
+            }
+        }
         private void ChessBoard_PlayerMarked(object sender, EventArgs e)
         {
             // Lấy thông tin người chơi hiện tại từ BoardManager

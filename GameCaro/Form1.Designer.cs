@@ -46,11 +46,13 @@
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picFireWorks = new System.Windows.Forms.PictureBox();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrbAvatar)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbMark)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFireWorks)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlChessBoard
@@ -64,6 +66,7 @@
             // pnlPicture
             // 
             this.pnlPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlPicture.Controls.Add(this.picFireWorks);
             this.pnlPicture.Controls.Add(this.ptrbAvatar);
             this.pnlPicture.Location = new System.Drawing.Point(809, 35);
             this.pnlPicture.Name = "pnlPicture";
@@ -199,6 +202,17 @@
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
+            // picFireWorks
+            // 
+            this.picFireWorks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picFireWorks.Location = new System.Drawing.Point(0, 0);
+            this.picFireWorks.Name = "picFireWorks";
+            this.picFireWorks.Size = new System.Drawing.Size(379, 385);
+            this.picFireWorks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFireWorks.TabIndex = 0;
+            this.picFireWorks.TabStop = false;
+            this.picFireWorks.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -221,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctbMark)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFireWorks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +259,7 @@
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.PictureBox picFireWorks;
     }
 }
 
