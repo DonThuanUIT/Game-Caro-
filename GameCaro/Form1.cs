@@ -29,15 +29,33 @@ namespace GameCaro
         }
 
         #region Methods
+        // Hàm này chỉ có 1 nhiệm vụ: Lấy thông tin người chơi và cập nhật UI
+        void UpdatePlayerUI()
+        {
+            Player currentPlayerInfo = ChessBoard.GetCurrentPlayerInfo();
+            txbPlayerName.Text = currentPlayerInfo.Name;
+            pctbMark.Image = currentPlayerInfo.Mark;
+        }
+
+        // SỬA HÀM NÀY
         void NewGame()
         {
+            // 1. Dọn dẹp pháo hoa
             picFireWorks.Visible = false;
-            picFireWorks.Image = null; // ngưng load ảnh để tiết kiệm bộ nhớ !. 
+            picFireWorks.Image = null;
 
-            prcbCoolDown.Value = 0; // set thanh thời gian về 0. 
-            tmCoolDown.Stop(); // cho nó không chạy để chờ người chơi đánh rồi mới chạy. 
+            // 2. Dừng timer và reset (chỉ cần 1 lần)
+            prcbCoolDown.Value = 0;
+            tmCoolDown.Stop();
+
+            // 3. Kích hoạt lại nút Undo
             undoToolStripMenuItem.Enabled = true;
-            ChessBoard.DrawChessBoard();  // vẽ lại 1 bàn cờ mới. 
+
+            // 4. Vẽ bàn cờ (hàm này không còn làm timer chạy nữa)
+            ChessBoard.DrawChessBoard();
+
+            // 5. CHỦ ĐỘNG cập nhật UI cho người chơi đầu tiên
+            UpdatePlayerUI();
         }
 
         void Quit()
@@ -79,7 +97,7 @@ namespace GameCaro
             pctbMark.Image = currentPlayerInfo.Mark;
 
             // Reset thanh thời gian
-            tmCoolDown.Start();
+            tmCoolDown.Start(); // việc này sẽ làm cho thanh thời gian chạy khi mới vào game. 
             prcbCoolDown.Value = 0;
         }
 

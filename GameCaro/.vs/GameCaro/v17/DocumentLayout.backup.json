@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|d:\\learncsharp\\game_caro_personal_project\\game-caro-\\gamecaro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\chessboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:chessboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|d:\\learncsharp\\game_caro_personal_project\\game-caro-\\gamecaro\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\constant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +23,8 @@
       "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:logicgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|d:\\learncsharp\\game_caro_personal_project\\game-caro-\\gamecaro\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\chessboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|solutionrelative:chessboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3683ABBE-96A9-4210-9F19-DA39BB0FF500}|GameCaro.csproj|D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\playinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwDQAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwvzUAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T16:06:41.643Z",
               "IsPinned": true,
@@ -60,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Resources.resx",
               "DocumentMoniker": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LogicGame.cs",
               "DocumentMoniker": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\LogicGame.cs",
               "RelativeDocumentMoniker": "LogicGame.cs",
@@ -80,8 +80,7 @@
               "RelativeToolTip": "LogicGame.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T09:19:01.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T09:19:01.303Z"
             },
             {
               "$type": "Document",
@@ -109,19 +108,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ChessBoardManager.cs",
               "DocumentMoniker": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\ChessBoardManager.cs",
               "RelativeDocumentMoniker": "ChessBoardManager.cs",
               "ToolTip": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\ChessBoardManager.cs",
               "RelativeToolTip": "ChessBoardManager.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAmwHkAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAcwDMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T16:48:25.471Z"
+              "WhenOpened": "2025-10-21T16:48:25.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Constant.cs",
               "DocumentMoniker": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\Constant.cs",
               "RelativeDocumentMoniker": "Constant.cs",
@@ -129,12 +129,11 @@
               "RelativeToolTip": "Constant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T16:17:03.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T16:17:03.386Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\LearnCsharp\\Game_Caro_Personal_Project\\Game-Caro-\\GameCaro\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

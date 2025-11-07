@@ -49,7 +49,7 @@ namespace GameCaro
             currentPlayer = 0; // Set người chơi đầu tiên. 
 
             // Báo cho Form1 cập nhật UI cho người chơi đầu tiên
-            FirePlayerMarkedEvent();
+            // FirePlayerMarkedEvent();
 
             matrix = new List<List<Button>>();
             for (int i = 0; i < Constant.CHESS_BOARD_WIDTH; i++)
