@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Player. : Thông tin người chơi gồm tên và dấu(X/O). 
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCaro
 {

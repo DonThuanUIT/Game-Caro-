@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChessBoardManager.cs" />
+    <Compile Include="LogicGame.cs" />
     <Compile Include="PlayInfor.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Constant.cs" />
