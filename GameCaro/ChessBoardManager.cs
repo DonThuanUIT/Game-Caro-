@@ -37,19 +37,19 @@ namespace GameCaro
             get { return playerMark; }
             set { playerMark = value; }
         }
-        #endregion
+
         private List<List<Button>> matrix;
 
         private event EventHandler playerMarked;
         public event EventHandler PlayerMarked
         {
-            add 
+            add
             {
-                playerMarked += value; 
+                playerMarked += value;
             }
             remove
             {
-                playerMarked -= value; 
+                playerMarked -= value;
             }
         }
 
@@ -65,6 +65,16 @@ namespace GameCaro
                 endedGame -= value;
             }
         }
+
+        private Stack<PlayInfor> playTimeLine; 
+        public Stack<PlayInfor> PlayTimeLine
+        {
+            get { return playTimeLine; }
+            set { playTimeLine = value; }
+        }
+
+        #endregion
+
         #region Initialize
         public ChessBoardManager(Panel chessBoard, TextBox playerName, PictureBox mark)
         {
@@ -78,15 +88,21 @@ namespace GameCaro
                 new Player("Magnus Carlsen", Image.FromFile(Application.StartupPath + "\\Resources\\dauX.png")), 
                 new Player("Hikaru Nakamura", Image.FromFile(Application.StartupPath + "\\Resources\\dauO.jpg"))
             };
-            currentPlayer = 0;
-            ChangePlayer(); 
+           
+            
         }
         #endregion
 
         #region Methods
         public void DrawChessBoard()
         {
-            ChessBoard.Enabled = true; 
+            ChessBoard.Enabled = true;
+            ChessBoard.Controls.Clear();
+            PlayTimeLine = new Stack<PlayInfor>();
+            currentPlayer = 0;
+            ChangePlayer();
+
+
             matrix = new List<List<Button>>(); 
 
             for (int i = 0; i < Constant.CHESS_BOARD_WIDTH; i++) // Số ô ngang
@@ -231,7 +247,9 @@ namespace GameCaro
             ChangeMark(btn);
             ChangePlayer();
 
-            if(playerMarked != null)
+            PlayTimeLine.Push(new PlayInfor(GetChessPoint(btn), CurrentPlayer));
+            CurrentPlayer = CurrentPlayer == 1 ? 0 : 1;
+            if (playerMarked != null)
             {
                 playerMarked(this, new EventArgs());
             }
@@ -248,17 +266,44 @@ namespace GameCaro
                 endedGame(this, new EventArgs()); 
             }
         }
+
+        public bool Undo()
+        {
+
+            if (PlayTimeLine.Count <= 0) return false;
+
+            PlayInfor oldPoint = PlayTimeLine.Pop(); 
+            Button btn = matrix[oldPoint.Point.X][oldPoint.Point.Y];
+
+            btn.BackgroundImage = null;
+
+            if (PlayTimeLine.Count <= 0)
+            {
+                currentPlayer = 0;
+            }
+            else
+            {
+                oldPoint = PlayTimeLine.Peek(); 
+                CurrentPlayer = oldPoint.CurrentPlayer == 1 ? 0 : 1;
+            }
+                
+            ChangePlayer();
+
+            return true; 
+        }
         private void ChangeMark(Button btn)
         {
             btn.BackgroundImage = players[CurrentPlayer].Mark;
 
-            CurrentPlayer = CurrentPlayer == 1 ? 0 : 1;
+           
         }
         private void ChangePlayer()
         {
             PlayerName.Text = players[CurrentPlayer].Name;
             PlayerMark.Image = players[CurrentPlayer].Mark;
         }
+
+
         #endregion
 
 

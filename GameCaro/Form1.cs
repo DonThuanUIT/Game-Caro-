@@ -24,21 +24,40 @@ namespace GameCaro
             ChessBoard.PlayerMarked += ChessBoard_PlayerMarked;
 
 
-            ChessBoard.DrawChessBoard();
+           
             prcbCoolDown.Step = Constant.COOL_DOWN_STEP;
             prcbCoolDown.Maximum = Constant.COOL_DOWN_TIME;
             prcbCoolDown.Value = 0; 
             tmCoolDown.Interval = Constant.COOL_DOWN_INTERVAL;
 
-
+            NewGame(); 
         }
+
+        #region Methods
         void EndGame()
         {
             tmCoolDown.Stop();  
             pnlChessBoard.Enabled = false; 
+            undoToolStripMenuItem.Enabled = false;
             MessageBox.Show("End Game!!!"); 
         }
+        void NewGame()
+        {
+            prcbCoolDown.Value = 0;
+            tmCoolDown.Stop();
+            undoToolStripMenuItem.Enabled = true; 
+            ChessBoard.DrawChessBoard();
+        }
 
+        void Quit()
+        {
+            Application.Exit();
+        }
+
+        void Undo()
+        {
+            ChessBoard.Undo(); 
+        }
         private void ChessBoard_PlayerMarked(object sender, EventArgs e)
         {
             tmCoolDown.Start();
@@ -61,6 +80,28 @@ namespace GameCaro
                 EndGame();
             }
         }
-       
-    } 
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewGame(); 
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Undo(); 
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quit(); 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                e.Cancel = true; 
+        }
+        #endregion
+
+    }
 }
